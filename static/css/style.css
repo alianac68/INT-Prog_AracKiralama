@@ -1,0 +1,194 @@
+/* style.css dosyanızın içeriği */
+
+/* Genel stiller */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar stilleri */
+.navbar {
+    background-color: #fff !important;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    color: #333 !important;
+    margin-left: 15px;
+}
+
+.nav-link:hover {
+    color: #007bff !important;
+}
+
+/* Hero bölümü stilleri */
+.hero {
+    color: white;
+    text-align: center;
+    padding: 150px 0;
+    position: relative; /* Altındaki resmi gösterebilmek için */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); /* Mevcut gradyanı koruyoruz */
+}
+
+.hero::before {
+    content: "";
+    background-image: url("../images/arka_plan.jpg"); /* Arka plan resminin yolu */
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3; /* Şeffaflık ayarı */
+    z-index: -1; /* Arka planda kalması için */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    position: relative; /* Üzerindeki resmin önüne gelmesi için */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    position: relative; /* Üzerindeki resmin önüne gelmesi için */
+}
+
+.search-bar {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Üzerindeki resmin önüne gelmesi için */
+    z-index: 1; /* Gerekirse arama çubuğunu öne almak için */
+}
+
+.search-bar label {
+    font-weight: bold;
+    color: #333;
+}
+
+.search-bar .form-select,
+.search-bar .form-control {
+    margin-bottom: 15px;
+}
+
+.search-bar .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.search-bar .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Öne çıkan araçlar bölümü stilleri */
+.featured-cars {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+}
+
+.featured-cars h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.featured-cars .card {
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.featured-cars .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.featured-cars .card-body {
+    padding: 15px;
+}
+
+.featured-cars .card-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.featured-cars .btn-outline-primary,
+.featured-cars .btn-outline-success,
+.featured-cars .btn-outline-info {
+    border-radius: 5px;
+}
+
+/* Avantajlar bölümü stilleri */
+.advantages {
+    padding: 50px 0;
+}
+
+.advantages h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.advantages .text-center {
+    margin-bottom: 20px;
+}
+
+.advantages i {
+    font-size: 2rem !important;
+}
+
+/* Müşteri yorumları bölümü stilleri */
+.py-5 {
+    padding: 50px 0;
+}
+
+.testimonial-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.testimonial-card p.fst-italic {
+    color: #555;
+}
+
+.testimonial-card p.text-muted {
+    font-size: 0.9rem;
+}
+
+/* Footer stilleri */
+.bg-dark {
+    background-color: #343a40 !important;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: #ccc;
+}

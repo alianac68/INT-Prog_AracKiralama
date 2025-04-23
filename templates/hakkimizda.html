@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımızda - Araç Kiralama Sistemi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .about-container {
+            padding: 50px 0;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #007bff;
+        }
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .section-content {
+            margin-bottom: 30px;
+        }
+        .team-member {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .team-member h5 {
+            font-weight: bold;
+            color: #343a40;
+            margin-bottom: 5px;
+        }
+        .team-member p {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+        .values-list {
+            list-style: none;
+            padding: 0;
+        }
+        .values-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .values-list i {
+            font-size: 1.5rem;
+            color: #007bff;
+            margin-right: 15px;
+        }
+        .values-list span {
+            font-weight: bold;
+            color: #343a40;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('index') }}">Araç Kiralama</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('index') }}">Anasayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('arac_liste') }}">Araçlar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('rezervasyonlarim') }}">Rezervasyonlarım</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('profil') }}">Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ url_for('hakkimizda') }}">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('iletisim') }}">İletişim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('giris') }}">Giriş</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('kayit') }}">Kayıt Ol</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container about-container">
+        <section class="section-title">
+            <h2>Hakkımızda</h2>
+            <p class="lead text-muted">Araç kiralama sektöründe yılların deneyimiyle sizlere güvenilir ve kaliteli hizmet sunuyoruz.</p>
+        </section>
+
+        <section class="section-content">
+            <h3>Misyonumuz</h3>
+            <p>Müşteri memnuniyetini en üst düzeyde tutarak, ihtiyaçlarınıza uygun, güvenli ve konforlu araç kiralama çözümleri sunmak. Her yolculuğunuzda yanınızda olmak ve seyahatlerinizi kolaylaştırmak için çalışıyoruz.</p>
+        </section>
+
+        <section class="section-content">
+            <h3>Vizyonumuz</h3>
+            <p>Araç kiralama sektöründe yenilikçi yaklaşımlarımız ve müşteri odaklı hizmet anlayışımızla lider konuma ulaşmak. Sürekli gelişerek ve değişerek, müşterilerimizin beklentilerini aşan bir deneyim sunmak.</p>
+        </section>
+
+        <section class="section-title">
+            <h2>Değerlerimiz</h2>
+        </section>
+        <section class="section-content">
+            <ul class="values-list">
+                <li><i class="bi bi-check-circle-fill"></i> <span>Müşteri Odaklılık:</span> İhtiyaçlarınızı anlamak ve en iyi çözümleri sunmak önceliğimizdir.</li>
+                <li><i class="bi bi-shield-check-fill"></i> <span>Güvenilirlik:</span> Dürüstlük ve şeffaflık ilkelerimizle güvenilir bir iş ortağıyız.</li>
+                <li><i class="bi bi-car-front-fill"></i> <span>Kalite:</span> Bakımlı ve güvenli araçlarımızla konforlu bir sürüş deneyimi sunuyoruz.</li>
+                <li><i class="bi bi-arrow-repeat"></i> <span>Sürekli Gelişim:</span> Hizmetlerimizi ve süreçlerimizi sürekli iyileştiriyoruz.</li>
+                <li><i class="bi bi-people-fill"></i> <span>Ekip Çalışması:</span> Başarımızın anahtarı olan uyumlu ve profesyonel ekibimizle hizmetinizdeyiz.</li>
+            </ul>
+        </section>
+
+        <section class="section-title">
+            <h2>Ekibimiz</h2>
+        </section>
+        <section class="section-content row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <div class="col team-member">
+                <img src="{{ url_for('static', filename='images/team/person1.jpg') }}" alt="ALİ ANAÇ">
+                <h5>ALİ ANAÇ </h5>
+                <p>Genel Müdür</p>
+            </div>
+            <div class="col team-member">
+                <img src="{{ url_for('static', filename='images/team/person2.jpg') }}" alt="FERHAT ASLAN">
+                <h5>FERHAT ASLAN</h5>
+                <p>Operasyon Müdürü</p>
+            </div>
+            <div class="col team-member">
+                <img src="{{ url_for('static', filename='images/team/person3.jpg') }}" alt="BERKAY KAYA">
+                <h5>BERKAY KAYA</h5>
+                <p>Müşteri İlişkileri</p>
+            </div>
+            </section>
+    </div>
+
+    <footer class="bg-light py-4 mt-5">
+        <div class="container text-center">
+            <p>&copy; {{ year }} Araç Kiralama Sistemi</p>
+            <p><a href="{{ url_for('index') }}" class="text-muted">Anasayfa</a> | <a href="{{ url_for('iletisim') }}" class="text-muted">İletişim</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</body>
+</html>
